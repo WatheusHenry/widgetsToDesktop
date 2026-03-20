@@ -71,9 +71,6 @@ body {
   background: linear-gradient(160deg, #5865F2 0%, #4752C4 100%);
   background-clip: padding-box;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 
-    0 4px 24px -1px rgba(0, 0, 0, 0.2),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.15);
   overflow: hidden;
   position: relative;
 }
@@ -269,7 +266,6 @@ body {
   position: relative;
   display: flex;
   flex: 1;
-  transition: background-color 0.2s ease;
   border-radius: 20px;
 }
 
@@ -287,12 +283,4 @@ body {
 }
 .slot:hover .widget-grip { opacity: 1; }
 .widget-grip:active { cursor: grabbing; }
-
-.slot-drag-over {
-  background-color: rgba(255, 255, 255, 0.05);
-}
-
-.slot-drag-over > .widget-container {
-  outline: 2px dashed rgba(255, 255, 255, 0.2);
-  outline-offset: 4px;
-}
+
