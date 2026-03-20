@@ -14,7 +14,7 @@
       {
         "title": "clockdesktop",
         "width": 450,
-        "height": 260,
+        "height": 300,
         "decorations": false,
         "transparent": true,
         "resizable": false,

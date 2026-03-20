@@ -4,6 +4,7 @@
 
 body {
   margin: 0;
+  padding: 4px;
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
@@ -52,6 +53,7 @@ body {
   justify-content: center;
   color: #ffffff;
   pointer-events: none;
+  
 }
 
 .time {
@@ -63,7 +65,7 @@ body {
 /* ── Discord ──────────────────────────────────────────────────────────────── */
 .discord-widget {
   border-radius: 22px;
-  width: 240px;
+  width: 250px;
   height: 120px;
   padding: 0;
   background: linear-gradient(160deg, #5865F2 0%, #4752C4 100%);
@@ -254,4 +256,43 @@ body {
   color: rgba(255,255,255,0.7);
   font-size: 12px;
   font-weight: 500;
+}
+
+.window-drag-bar {
+  height: 8px;
+  width: 100%;
+  cursor: grab;
+}
+.window-drag-bar:active { cursor: grabbing; }
+
+.slot {
+  position: relative;
+  display: flex;
+  flex: 1;
+  transition: background-color 0.2s ease;
+  border-radius: 20px;
+}
+
+.widget-grip {
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 50;
+  color: rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  cursor: grab;
+  transition: opacity 0.15s ease;
+  line-height: 0;
+}
+.slot:hover .widget-grip { opacity: 1; }
+.widget-grip:active { cursor: grabbing; }
+
+.slot-drag-over {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.slot-drag-over > .widget-container {
+  outline: 2px dashed rgba(255, 255, 255, 0.2);
+  outline-offset: 4px;
 }
